@@ -6,13 +6,15 @@ import { theme } from "@/theme";
 export function PlantCard({ plant }: { plant: PlantType }) {
   return (
     <View style={styles.plantCard}>
-      <PlantlyImage size={100} />
+      <PlantlyImage size={100} imageUri={plant.imageUri} />
       <View style={styles.details}>
         <Text numberOfLines={1} style={styles.plantName}>
           {plant.name}
         </Text>
         <Text style={styles.subtitle}>
-          Water every {plant.wateringFrequencyDays} days
+          {plant.wateringFrequencyDays === 1
+            ? "Water every day"
+            : `Water every ${plant.wateringFrequencyDays} days`}
         </Text>
       </View>
     </View>
