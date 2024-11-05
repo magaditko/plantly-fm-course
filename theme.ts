@@ -7,4 +7,8 @@ export const theme = {
   colorLightGrey: "#eee",
   colorBlack: "#000",
   colorGrey: "#808080",
+  // this is from PostScript name
+  fontCaveatIos: "Caveat-Regular",
+  // this is the file name
+  fontCaveatAndroid: "Caveat_400Regular",
 };

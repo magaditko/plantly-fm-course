@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "plantly",
+    "name": "Plantly",
     "slug": "plantly",
     "scheme": "plantly",
     "version": "1.0.0",
@@ -27,7 +27,12 @@
       "bundler": "metro"
     },
     "plugins": [
-      "expo-router"
+      "expo-router",
+      ["expo-font", {
+        "fonts": [
+          "node_modules/@expo-google-fonts/caveat/Caveat_400Regular.ttf"
+        ]
+      }]
     ]
   }
 }

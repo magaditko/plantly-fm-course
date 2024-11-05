@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Platform, StyleSheet, Text, View } from "react-native";
 import { theme } from "@/theme";
 import { useRouter } from "expo-router";
 import { useUserStore } from "@/store/userStore";
@@ -49,8 +49,12 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   tagline: {
-    fontSize: 24,
+    fontSize: 34,
     color: theme.colorWhite,
     textAlign: "center",
+    fontFamily: Platform.select({
+      ios: theme.fontCaveatIos,
+      android: theme.fontCaveatAndroid,
+    }),
   },
 });
