@@ -21,6 +21,16 @@ export default function PlantDetails() {
   const navigation = useNavigation();
 
   useEffect(() => {
+    // to trigger the action:
+    // plantly://plants/[plantId]\?action=water
+    if (params.action === "water") {
+      if (typeof plantId === "string") {
+        waterPlant(plantId);
+      }
+    }
+  }, []);
+
+  useEffect(() => {
     navigation.setOptions({
       title: plant?.name,
     });

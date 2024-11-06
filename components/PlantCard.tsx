@@ -6,6 +6,8 @@ import { Link } from "expo-router";
 
 export function PlantCard({ plant }: { plant: PlantType }) {
   return (
+    // to pass parameters between screens we could use
+    // href={{pathname: `plants/${plant.id}`, params: {action: "water"} }}
     <Link href={`plants/${plant.id}`} asChild>
       <Pressable style={styles.plantCard}>
         <PlantlyImage size={100} imageUri={plant.imageUri} />
